@@ -17,31 +17,31 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ env.NODE_VERSION }}
-        cache: 'npm'
+    # - name: Set up Node.js
+    #   uses: actions/setup-node@v3
+    #   with:
+    #     node-version: ${{ env.NODE_VERSION }}
+    #     cache: 'npm'
 
-    - name: Set up Ruby
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: 2.6.0
+    # - name: Set up Ruby
+    #   uses: ruby/setup-ruby@v1
+    #   with:
+    #     ruby-version: 2.6.0
 
-    - name: Install the bundler gem
-      run: gem install bundler
+    # - name: Install the bundler gem
+    #   run: gem install bundler
 
-    - name: Install gulp
-      run: npm install -g gulp
+    # - name: Install gulp
+    #   run: npm install -g gulp
 
-    - name: Install js dependencies
-      run: npm install
+    # - name: Install js dependencies
+    #   run: npm install
 
-    - name: Install Jekyll plugins and packages
-      run: bundle install
+    # - name: Install Jekyll plugins and packages
+    #   run: bundle install
     
-    - name: Build the app
-      run: gulp build
+    # - name: Build the app
+    #   run: gulp build
 
     - name: Upload artifact for deployment job
       uses: actions/upload-artifact@v3
